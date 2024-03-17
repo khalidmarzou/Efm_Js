@@ -1,0 +1,36 @@
+JavaScript has a multitude of built-in functions and methods that serve various purposes. Here's a list of some commonly used function types and their purposes:
+
+1. **Array Functions**:
+   - `map()`: Creates a new array by applying a function to each element of an existing array.
+   - `filter()`: Creates a new array with elements that pass a certain condition.
+   - `forEach()`: Executes a provided function once for each array element.
+   - `reduce()`: Reduces the array to a single value by applying a function to each element.
+   - `sort()`: Sorts the elements of an array.
+   - `indexOf()`: Returns the first index at which a given element can be found in the array.
+   - `find()`: Returns the first element in the array that satisfies the provided testing function.
+   - `findIndex()`: Returns the index of the first element in the array that satisfies the provided testing function.
+   - `slice()`: Extracts a section of an array and returns a new array.
+   - `splice()`: Changes the contents of an array by removing or replacing existing elements.
+
+2. **String Functions**:
+   - `charAt()`: Returns the character at a specified index.
+   - `concat()`: Joins two or more strings.
+   - `indexOf()`: Returns the index within the calling string object of the first occurrence of the specified value.
+   - `match()`: Searches a string for a match against a regular expression and returns the matches.
+   - `replace()`: Searches a string for a specified value, or a regular expression, and returns a new string where the specified values are replaced.
+   - `split()`: Splits a string into an array of substrings.
+   - `substring()`: Returns the part of the string between the start and end indexes.
+
+3. **Math Functions**:
+   - `Math.abs()`: Returns the absolute value of a number.
+   - `Math.ceil()`: Returns the smallest integer greater than or equal to a given number.
+   - `Math.floor()`: Returns the largest integer less than or equal to a given number.
+   - `Math.max()`: Returns the largest of zero or more numbers.
+   - `Math.min()`: Returns the smallest of zero or more numbers.
+   - `Math.random()`: Returns a random number between 0 (inclusive) and 1 (exclusive).
+
+4. **Other Common Functions**:
+   - `parseInt()`: Parses a string and returns an integer.
+   - `parseFloat()`: Parses a string and returns a floating point number.
+   - `isNaN()`: Determines whether a value is NaN (Not-A-Number).
+   - `typeof()`: Returns the data type of a variable or expression.
