@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <h5>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <title>EFM RABAT</title>
+    <style>
+      article {
+        height: 300px;
+        width: 300px;
+        border: 1px solid;
+      }
+      h5 {
+        text-align: center;
+        background-color: yellow;
+        height: 10%;
+        vertical-align: middle;
+      }
+    </style>
+  </h5>
+  <body class="d-flex justify-content-around vh-100 align-items-center">
+    <article>
+      <h5>Select Ur Book</h5>
+      <div
+        style="height: 90%"
+        class="bg-warning d-flex justify-content-center align-items-center"
+      >
+        <select
+          name="selectBook"
+          id="selectBook"
+          style="width: 90%; height: 40px"
+          class="form-control"
+        ></select>
+      </div>
+    </article>
+    <article>
+      <h5>Book Selected</h5>
+      <p
+        id="affichage"
+        style="height: 70%"
+        class="bg-warning d-flex justify-content-center align-items-center"
+      ></p>
+      <button class="btn btn-primary" id="sendToPanier">Buy</button>
+    </article>
+    <article>
+      <h5>Panier</h5>
+      <div
+        id="panier"
+        style="
+          height: 70%;
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+          overflow: auto;
+        "
+        class="bg-warning d-flex justify-content-center align-items-center"
+      >
+      </div>
+      <div id="pirxTotal">Prix Total :</div>
+    </article>
+    <script src="EfmRabat.js"></script>
+  </body>
+</html>

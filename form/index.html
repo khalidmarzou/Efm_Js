@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form</title>
+</head>
+<body>
+
+    <form>
+        <input type="search">
+        <button >Rechercher</button>
+        <button>supprimer</button>
+        <label for="nomComplet">Nom Complet:</label>
+        <input id="nomComplet" type="text">
+        <label for="CIN">CIN:</label>
+        <input id="CIN" type="text">
+        <label for="Age">Age</label>
+        <input id="Age" type="number">
+        <label for="Niveau">Niveau:</label>
+        <select name="Niveau" id="Niveau">
+            <option value="">--Selection Votre branche--</option>
+        </select>
+        <label for="Branche">Branche:</label>
+        <select name="Branche" id="Branche">
+        
+        </select>
+        <button>ajouter</button>  
+        <button>Modifier</button>
+    </form>
+    <div >
+        <ul type="none" id="show">
+            <li>Nom Complet :</li>
+            <li>CIN :</li>
+            <li>Age:</li>
+            <li>Niveau:</li>
+            <li>Branche:</li>
+            <li>Module:</li>
+        </ul>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
