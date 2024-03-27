@@ -112,22 +112,27 @@ btnSupprimer.value = "Supprimer";
 document.body.append(btnSupprimer);
 btnSupprimer.addEventListener("click", () => {
   const elementsSupprimerCode = [];
-  Array.from(tbody.children)
-    .filter((item) => {
-      return item.style.backgroundColor === "green";
-    })
-    .forEach(
-      (item) =>
-        elementsSupprimerCode.push(Number(item.children[0].innerText)) &&
-        item.remove()
+  let confirmation = confirm("Are U sure ??");
+  if (confirmation) {
+    Array.from(tbody.children)
+      .filter((item) => {
+        return item.style.backgroundColor === "green";
+      })
+      .forEach(
+        (item) =>
+          elementsSupprimerCode.push(Number(item.children[0].innerText)) &&
+          item.remove()
+      );
+    elementsSupprimerCode.forEach((code) =>
+      listChamps.splice(
+        listChamps.findIndex((prod) => prod.code === code),
+        1
+      )
     );
-  elementsSupprimerCode.forEach((code) =>
-    listChamps.splice(
-      listChamps.findIndex((prod) => prod.code === code),
-      1
-    )
-  );
-  console.log(listChamps);
+    console.log(listChamps);
+  } else {
+    return null;
+  }
 });
 
 // Question 8 Creer Classe :
