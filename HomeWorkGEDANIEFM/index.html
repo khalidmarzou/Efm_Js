@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>EFMJS CASA 2023</title>
+  </head>
+  <body>
+    <h1>Liste des Produits</h1>
+    <form action="" style="opacity: 0; pointer-events: none">
+      <label for="code">Code</label>
+      <input type="number" id="code" placeholder="Code" required />
+      <label for="titre">Titre</label>
+      <input type="text" pattern="[a-zA-Z]+" placeholder="Titre" id="titre"
+      required />
+      <label for="description">Description</label>
+      <input type="text" id="description" placeholder="Description" required />
+      <label for="prix">Prix</label>
+      <input type="number" placeholder="Prix" id="prix" required />
+      <label for="categorie">Categorie</label>
+      <input type="text" id="categorie" placeholder="Categorie" required />
+    </form>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Titre</th>
+          <th>Description</th>
+          <th>Prix</th>
+          <th>Categorie</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <input type="button" value="Ajouter" id="ajouter" />
+    <script src="script.js"></script>
+  </body>
+</html>
