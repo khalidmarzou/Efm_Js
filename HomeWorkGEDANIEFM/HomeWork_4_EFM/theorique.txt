@@ -1,0 +1,24 @@
+1. js est une Language de programation de type script , qui execute dans
+	coté client , et sa role de maitre le site web dynamique, interactive,
+	et de manipuler le contenu du html et css.
+
+2. deference entre java et js :
+	js : language de script cote client.
+	java : language de script cote serveur.
+
+3. la bonne method est de placer js a la fin du body , pour eviter l'execution
+	du code avant du telechargement du page, si en a manipulation des
+	elements html.
+
+4. true / true
+
+5.	0 , 4 , 6 , 6
+	1 , 4 , 12, 6		
+	2 , 4 , 18, 6
+
+6.	let nombre = 4;
+	let result = 1;
+	for (let i = nombre; i > 0; i--){
+		result *= i;
+	}
+	console.log(result);

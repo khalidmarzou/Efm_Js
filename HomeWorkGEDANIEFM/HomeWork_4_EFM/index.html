@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Notes des Stagiaires</title>
+  </head>
+  <body>
+    <fieldset class="container border mt-2 rounded p-2">
+      <legend class="text-danger text-decoration-underline">
+        # Nouvelle ligne :
+      </legend>
+      <form action="" method="" class="px-5 d-flex flex-column gap-3">
+        <div class="d-flex gap-1">
+          <label for="id">ID :</label>
+          <input type="number" class="form-control w-25" id="id" />
+          <input type="button" class="btn btn-warning" value="Lire" id="lire" />
+        </div>
+        <div class="d-flex gap-1">
+          <label for="id">Nom :</label>
+          <input
+            type="number"
+            class="form-control w-25"
+            name="id"
+            id="nom"
+            placeholder="Nom du Stagiaire"
+          />
+        </div>
+        <div class="d-flex gap-1">
+          <label for="filiere">Filiere :</label>
+          <input type="radio" name="filiere" id="tdi" checked />
+          <label for="tdi">TDI</label>
+          <input type="radio" name="filiere" id="tdm" />
+          <label for="tdm">TDM</label>
+          <input type="radio" name="filiere" id="tri" />
+          <label for="TRI">TRI</label>
+        </div>
+        <div class="d-flex gap-1">
+          <label for="note">Note :</label>
+          <input
+            type="number"
+            class="form-control w-25"
+            name="note"
+            id="note"
+          />
+        </div>
+        <input
+          type="button"
+          class="btn btn-primary w-25"
+          value="Ajouter la note"
+          class="w-25"
+          id="btnAjouter"
+        />
+      </form>
+    </fieldset>
+    <h1 class="mt-2">Listes des notes</h1>
+    <table class="table table-info">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>NOM</th>
+          <th>NOTE</th>
+          <th>FILIERE</th>
+          <th>GESTION</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Alami Hicham</td>
+          <td>8</td>
+          <td>TDI</td>
+          <td>
+            <input
+              type="button"
+              value="Supprimer"
+              class="btn btn-danger"
+              onclick="supprimer(event)"
+            />
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="2">La Meilleure Note :</th>
+          <td id="noteMax">8</td>
+        </tr>
+      </tfoot>
+    </table>
+    <script src="script.js"></script>
+  </body>
+</html>
