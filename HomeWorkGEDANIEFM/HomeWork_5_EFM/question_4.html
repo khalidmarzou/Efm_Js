@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulaire d'inscription a la formation</title>
+  </head>
+  <body>
+    <div class="main-block">
+      <div class="left-part">
+        <h1>Vous enregistrer au cours</h1>
+      </div>
+      <form>
+        <div class="title">
+          <h2>Inscrivez-vous ici</h2>
+        </div>
+        <div class="info">
+          <input type="text" name="name" placeholder="Nom complet" />
+          <input type="text" name="mail" placeholder="Email" />
+          <input type="text" name="tel" placeholder="Numéro de téléphone" />
+          <select>
+            <option value="course-type" selected>Type de cours*</option>
+            <option value="short-courses">cours courts</option>
+            <option value="featured-courses">Cours facturé</option>
+          </select>
+        </div>
+        <input type="button" class="btn btn-success" value="Envoyer" />
+      </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".main-block").css({
+          display: "flex",
+          "flex-direction": "column",
+          "justify-content": "center",
+          "align-items": "center",
+          height: "100%",
+          padding: "25px",
+        });
+        $(".left-part, form").css({
+          padding: "25px",
+        });
+        $(".left-part").css({
+          "text-align": "center",
+        });
+        $("form").css({
+          background: "rgba(0, 0, 0, 0.1)",
+        });
+        $(".title").css({
+          display: "flex",
+          "align-items": "center",
+          "margin-bottom": "20px",
+        });
+        $(".info").css({
+          display: "flex",
+          "flex-direction": "column",
+        });
+        $("input, select").css({
+          padding: "5px",
+          "margin-bottom": "30px",
+          background: "transparent",
+          border: "none",
+          "border-bottom": "1px solid black",
+        });
+        $("button").css({
+          width: "100%",
+        });
+      });
+    </script>
+  </body>
+</html>

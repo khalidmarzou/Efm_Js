@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Formulaire d'inscription a la formation</title>
+  </head>
+  <body>
+    <div class="main-block">
+      <div class="left-part">
+        <h1>Vous enregistrer au cours</h1>
+      </div>
+      <form>
+        <div class="title">
+          <h2>Inscrivez-vous ici</h2>
+        </div>
+        <div class="info">
+          <input type="text" name="name" placeholder="Nom complet" />
+          <input type="text" name="mail" placeholder="Email" />
+          <input type="text" name="tel" placeholder="Nméro de téléphone" />
+
+          <select>
+            <option value="course-type" selected>Type de cours*</option>
+            <option value="short-courses">cours courts</option>
+            <option value="featured-courses">Cours facturé</option>
+          </select>
+        </div>
+        <input type="button" class="btn btn-success" value="Envoyer" />
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
