@@ -73,10 +73,11 @@ function ajouterNote() {
   let filiere = Array.from(
     document.querySelectorAll('input[name="filiere"]')
   ).find((box) => box.checked === true).nextElementSibling.textContent;
+  let color = Number(inputs[2].value) > 10 ? "green" : "red";
   tbody.innerHTML += `<tr>
                             <td>${inputs[0].value}</td>
                             <td>${inputs[1].value}</td>
-                            <td>${inputs[2].value}</td>
+                            <td style="color : ${color}">${inputs[2].value}</td>
                             <td>${filiere}</td>
                             <td>
                                 <input type="button" onclick="supprimer(event)" value="Supprimer" class="btn btn-danger" />
