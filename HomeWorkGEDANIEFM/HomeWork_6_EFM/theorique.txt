@@ -1,0 +1,5 @@
+1. L
+2. toUpperCase()
+3. 2 byTagName [0]
+4. 2 .css
+5. 1 success
