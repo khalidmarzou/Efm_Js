@@ -25,6 +25,7 @@ function verifierMatricule() {
 // Question  4:
 const marqueInput = document.getElementsByName("marque")[0];
 const carburantInput = document.getElementsByName("carburant")[0];
+
 const verifierMarqueCarburant = () => {
   const pattern = /^([a-z]{4,15})$/i;
   const validMar = pattern.test(marqueInput.value);

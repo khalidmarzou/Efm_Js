@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" placeholder="nom" />
+    <input type="text" placeholder="prenom" />
+    <button id="getDATA">GET DATA</button>
+    <button id="sendDATA">SEND DATA</button>
+    <ul></ul>
+    <script>
+      function getData() {
+        const xhr = new XMLHttpRequest();
+        xhr.open(
+          "GET",
+          "https://getpantry.cloud/apiv1/pantry/48db89c1-ef9c-4410-b945-2c1a51212191/basket/revision",
+          true
+        );
+        xhr.onreadystatechange = function () {
+          if (this.readyState === 4) {
+            if (this.status >= 200 && this.status < 300) {
+              JSON.parse(this.responseText).stagiaires.forEach((stagiaire) => {
+                document.querySelector(
+                  "ul"
+                ).innerHTML += `<li>${stagiaire.nom} - ${stagiaire.prenom}</li>`;
+              });
+            }
+          }
+        };
+        xhr.send();
+      }
+      document.getElementById("getDATA").onclick = getData;
+
+      function sendData() {
+        const inputNom = document.querySelector("input");
+        const inputPrenom = document.querySelectorAll("input")[1];
+        let dataJSON = {
+          stagiaires: [{ nom: inputNom.value, prenom: inputPrenom.value }],
+        };
+        dataJSON = JSON.stringify(dataJSON);
+
+        const xhr = new XMLHttpRequest();
+        xhr.open(
+          "POST",
+          "https://getpantry.cloud/apiv1/pantry/48db89c1-ef9c-4410-b945-2c1a51212191/basket/revision",
+          true
+        );
+        xhr.setRequestHeader(
+          "content-type",
+          "application/json ; charset= UTF-8"
+        );
+        xhr.onreadystatechange = function () {
+          if (this.readyState === 4) {
+            if (this.status >= 200 && this.status < 300) {
+              console.log("data send with success");
+            }
+          }
+        };
+
+        xhr.send(dataJSON);
+      }
+
+      document.getElementById("sendDATA").onclick = sendData;
+
+      fetch(
+        "https://getpantry.cloud/apiv1/pantry/48db89c1-ef9c-4410-b945-2c1a51212191/basket/revision"
+      )
+        .then(function (response) {
+          console.log(response);
+          return response.json();
+        })
+        .then(function (data) {
+          console.log(data);
+          return data.stagiaires;
+        })
+        .then(function (ziko) {
+          console.log(ziko);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    </script>
+  </body>
+</html>
