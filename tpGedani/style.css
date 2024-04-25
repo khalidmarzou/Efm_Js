@@ -1,0 +1,11 @@
+label {
+  width: 20%;
+}
+input[type="radio"] {
+  height: 20px;
+  width: 20px;
+}
+span {
+  position: relative;
+  top: 35px;
+}

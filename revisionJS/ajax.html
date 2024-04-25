@@ -10,6 +10,11 @@
     <input type="text" placeholder="prenom" />
     <button id="getDATA">GET DATA</button>
     <button id="sendDATA">SEND DATA</button>
+    <div>
+      <ul>
+        <li>Hello World from Sublime Text</li>
+      </ul>
+    </div>
     <ul></ul>
     <script>
       function getData() {
@@ -70,6 +75,7 @@
       )
         .then(function (response) {
           console.log(response);
+          console.log("Hello World");
           return response.json();
         })
         .then(function (data) {
