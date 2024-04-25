@@ -217,6 +217,7 @@ function chargeTable() {
                                 </tr>
                               `;
     });
+    scrollToBottom();
   });
 }
 
@@ -313,12 +314,18 @@ function edit(event) {
     (med) => med.name === tr.children[3].textContent
   );
   tr.children[5].innerHTML = `<input class="form-control" type="number" value="${tr.children[5].textContent}"/>`;
+  scrollToBottom();
   event.target.onclick = function () {
     tr.children[5].innerHTML = tr.children[5].firstElementChild.value;
     dataClients[clientIndex].medications[medicationIndex].quantity = Number(
       tr.children[5].textContent
     );
     ajaxPost(url, { clients: dataClients, medications: dataMedications });
-    ajaxGet(url);
+    chargeTable();
   };
+}
+
+// Scroll to Bottom :
+function scrollToBottom() {
+  window.scrollTo(0, document.body.scrollHeight);
 }
