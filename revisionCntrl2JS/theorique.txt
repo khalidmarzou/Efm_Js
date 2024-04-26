@@ -1,0 +1,4 @@
+1. AJAX : est une technique de devellopement web permettant des operations asynchrones entre
+    le navigateur et le serveur sans recharger la page.
+2. la fonction preventDefault() : empeche les comportement par default d'un evenement.
+3. JSON.parse() : transferer les donnes d'un JSON a des objects javaScript
